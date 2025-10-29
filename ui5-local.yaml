@@ -2,6 +2,20 @@ specVersion: "3.1"
 metadata:
   name: sap.ui.demo.cart
 type: application
+framework:
+  name: SAPUI5
+  version: 1.98.0
+  libraries:
+    - name: sap.f
+    - name: sap.m
+    - name: sap.ui.core
+    - name: sap.ui.layout
+    - name: sap.ui.comp
+    - name: sap.ui.generic.app
+    - name: sap.ui.table
+    - name: sap.ushell
+    - name: themelib_sap_bluecrystal
+    - name: themelib_sap_fiori_3
 server:
   customMiddleware:
     - name: fiori-tools-proxy
@@ -13,11 +27,6 @@ server:
             url: https://f80d7f7e-8924-4544-9498-5524e9fd4ff1.abap.us10.hana.ondemand.com/
             scp: true
             destination: abap-cloud-abap-trial-a8d5cbbftrial-dev
-        ui5:
-          path:
-            - /resources
-            - /test-resources
-          url: https://ui5.sap.com
     - name: fiori-tools-appreload
       afterMiddleware: compression
       configuration:
